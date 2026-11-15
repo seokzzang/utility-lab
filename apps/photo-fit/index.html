@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="사진의 픽셀, 용량, 형식을 한 번에 맞추세요. 서버 업로드 없이 내 기기에서 자르고 JPG로 저장하는 무료 사진 도구.">
+<meta name="theme-color" content="#f5f3ec"><title>딱맞춤 — 제출용 사진, 한 번에</title>
+<link rel="stylesheet" href="./style.css"><script src="./app.js" defer></script>
+</head>
+<body>
+<header class="top"><a class="brand" href="./">▣ 딱맞춤<span>PHOTO FIT</span></a><span class="privacy">↗ 사진은 내 기기 안에만</span></header>
+<main>
+<section class="intro"><p class="eyebrow">작은 규격 때문에, 큰 수고 하지 않도록.</p><h1>사진 한 장.<br>규격은 <em>딱 맞게.</em></h1><p class="lead">자르고, 용량 줄이고, JPG로 저장까지.<br>제출 전 번거로운 준비를 한곳에서 끝내세요.</p><div class="tags"><span>로그인 없이</span><span>업로드 없이</span><span>무료로</span></div></section>
+<section class="workspace" aria-label="사진 규격 편집기">
+<div class="editor">
+<div class="section-heading"><h2><span>01</span> 사진 준비</h2><button type="button" id="reset" hidden>처음으로</button></div>
+<label class="drop" id="drop" tabindex="0"><input id="file" type="file" accept="image/jpeg,image/png,image/webp"><span class="upload-icon">＋</span><strong>사진을 선택하거나 끌어오세요</strong><span>JPG · PNG · WebP / 최대 30MB</span><span class="pick">내 기기에서 선택 ↗</span></label>
+<div id="preview-area" hidden><div class="canvas-wrap"><canvas id="preview" aria-label="잘라낼 사진 미리보기"></canvas></div><p id="file-info" class="caption"></p><fieldset class="crop"><legend>사진 위치 조정</legend><label>확대<input id="zoom" type="range" min="1" max="3" step="0.01" value="1"></label><label>가로 위치<input id="pan-x" type="range" min="0" max="100" value="50"></label><label>세로 위치<input id="pan-y" type="range" min="0" max="100" value="50"></label></fieldset><label class="replace" for="file">다른 사진 선택 ↗</label></div>
+</div>
+<div class="settings"><h2><span>02</span> 제출 규격</h2><label for="preset">어디에 사용할 사진인가요?</label><select id="preset"><option value="passport">온라인 여권용 · 참고 규격</option><option value="id">일반 증명사진 · 3:4</option><option value="custom">직접 입력</option></select><div class="dimensions"><label>가로 px<input id="width" type="number" min="32" max="4096" value="413" required></label><span>×</span><label>세로 px<input id="height" type="number" min="32" max="4096" value="531" required></label></div><label for="limit">최대 파일 용량</label><div class="suffix"><input id="limit" type="number" min="5" max="10000" value="500" required><span>KB</span></div><p class="hint">1KB = 1,024바이트 · 픽셀은 그대로, JPG 품질만 조정해요.</p><div class="notice"><strong>규격 조정 ≠ 제출 승인</strong><p>얼굴 크기·배경·촬영일 등은 별도로 확인하세요. 자동 얼굴 보정이나 배경 제거는 하지 않아요.</p><a href="https://www.passport.go.kr/home/kor/contents.do?menuPos=12" target="_blank" rel="noopener noreferrer">외교부 여권 사진 규정 확인 ↗</a></div><button id="convert" class="primary" disabled>규격에 맞춰 JPG 만들기 <span>↗</span></button><p id="status" role="status" aria-live="polite">사진을 선택하면 시작할 수 있어요.</p><div id="result" hidden><p id="result-info"></p><a id="download" class="download" download="photo-fit.jpg">JPG 다운로드 ↓</a></div></div>
+</section>
+<section class="how"><h2>복잡한 편집 대신,<br>필요한 것만.</h2><div><strong>01 / 선택</strong><p>기기에 있는 사진을 불러오세요.<br>어디에도 전송하지 않아요.</p></div><div><strong>02 / 맞춤</strong><p>규격을 고르고 위치를 조정하세요.<br>보이는 영역 그대로 잘라드려요.</p></div><div><strong>03 / 저장</strong><p>용량까지 확인된 JPG를 저장하세요.<br>원본 사진은 바뀌지 않아요.</p></div></section>
+</main><footer><span>▣ 딱맞춤</span><p>사진은 페이지를 닫으면 메모리에서 사라져요. 새로고침하면 다시 선택해 주세요.</p><small>브라우저 로컬 처리 · 계정 및 서버 저장 없음</small></footer>
+</body></html>
