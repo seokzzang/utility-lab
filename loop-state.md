@@ -1,10 +1,12 @@
 task owner: cheolsu
 requester: Danny
-current stage: publishing
+current stage: delivered
 current_loop: 1
 max_loop: 3
-status: in_progress
-next action: Publish to confirmed seokzzang/utility-lab main, then verify Pages
+status: completed
+next action: Danny tries the app; selected future apps go in apps/<slug>
 last subagent: none
-verified: syntax, 3 browser tests, desktop/mobile rendering, catalog navigation
-not verified: live Pages, real mobile devices
+verified: public HTTP 200, catalog navigation, public Chromium tests 3/3, JPG download and size, desktop/mobile layout
+not verified: real iOS Safari and Android devices
+remote_repository: https://github.com/seokzzang/utility-lab
+public_url: https://seokzzang.github.io/utility-lab/apps/photo-fit/
